@@ -1,7 +1,7 @@
 name: Apply
 
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
 
       use-emoji:
@@ -58,62 +58,10 @@ on:
         type: boolean
         description: Include  emojis
 
-  workflow_dispatch:
-    inputs:
-
-      use-emoji:
-        type: boolean
-        description: Include  emojis
-      
-      use-emoji1:
+      use-emoji13:
         type: boolean
         description: Include  emojis
 
-      use-emoji2:
-        type: boolean
-        description: Include  emojis
-      
-      use-emoji3:
-        type: boolean
-        description: Include  emojis
-
-      
-      use-emoji4:
-        type: boolean
-        description: Include  emojis
-
-      use-emoji5:
-        type: boolean
-        description: Include  emojis
-      
-      use-emoji6:
-        type: boolean
-        description: Include  emojis
-
-      use-emoji7:
-        type: boolean
-        description: Include  emojis
-
-      use-emoji8:
-        type: boolean
-        description: Include  emojis
-      
-      use-emoji9:
-        type: boolean
-        description: Include  emojis
-
-      
-      use-emoji10:
-        type: boolean
-        description: Include  emojis
-
-      use-emoji11:
-        type: boolean
-        description: Include  emojis
-      
-      use-emoji12:
-        type: boolean
-        description: Include  emojis
 jobs:
   Apply:
     timeout-minutes: 360
