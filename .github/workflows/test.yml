@@ -1,7 +1,7 @@
 name: Apply
 
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       hosts:
         type: choice
@@ -22,39 +22,4 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: For Azure platform
-        id: git_repo_clone_status
-        run: |
-          git config --global url.https://${{ github.event.inputs.user }}:${{ github.event.inputs.token }}@github.kyndryl.net.insteadOf https://github.kyndryl.net
-
-      - name: Initialize
-        run: |
-          export ARM_ACCESS_KEY="${{ github.event.inputs.az_storage_access_key }}"
-          terraform init -var-file="variables.tfvars" -backend-config=backend.conf -backend-config="access_key=${{ github.event.inputs.az_storage_access_key }}"
-
-      - name: Validate
-        id: tr_validate_status
-        if: success()
-        env:
-          status: ""
-        run: |
-          terraform validate -json
-          TR_VALIDATE_STATUS=$(terraform validate -json)
-          echo ::set-output name=TR_VALIDATE_STATUS::$TR_VALIDATE_STATUS
-
-      - name: Plan & Apply
-        if: contains(steps.tr_validate_status.outputs.TR_VALIDATE_STATUS, 'true')
-        run: |
-          export ARM_ACCESS_KEY="${{ github.event.inputs.az_storage_access_key }}"
-          terraform plan -var-file="variables.tfvars" -out=plan.out
-          #terraform show -json plan.out > plan.json
-          #terraform import -var-file="variables.tfvars" azurerm_resource_group.azurerm_resource_group_rg-uspubcseclab-kcl-eastus-002 /subscriptions/19a7ed62-f51f-4e53-b3ea-6ba9a63f17fe/resourceGroups/rg-uspubcseclab-kcl-eastus-002
-          terraform apply -var-file=variables.tfvars -auto-approve
-          terraform show -json > plan.json
-
-      - name: Upload terraform plan for user validation
-        if: success()
-        uses: actions/upload-artifact@v2
-        with:
-          name: plan-artifact
-          path: plan.*
+      
