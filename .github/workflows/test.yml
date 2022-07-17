@@ -3,64 +3,17 @@ name: Apply
 on:
   workflow_call:
     inputs:
-
-      use-emoji:
+      hosts:
+        type: choice
+        description: Who to greet
+        options: 
+        - all
+        - localhost
+        
+      gather-facts:
         type: boolean
-        description: Include  emojis
+        description: Gather facts?
       
-      use-emoji1:
-        type: boolean
-        description: Include  emojis
-
-      use-emoji2:
-        type: boolean
-        description: Include  emojis
-      
-      use-emoji3:
-        type: boolean
-        description: Include  emojis
-
-      
-      use-emoji4:
-        type: boolean
-        description: Include  emojis
-
-      use-emoji5:
-        type: boolean
-        description: Include  emojis
-      
-      use-emoji6:
-        type: boolean
-        description: Include  emojis
-
-      use-emoji7:
-        type: boolean
-        description: Include  emojis
-
-      use-emoji8:
-        type: boolean
-        description: Include  emojis
-      
-      use-emoji9:
-        type: boolean
-        description: Include  emojis
-
-      
-      use-emoji10:
-        type: boolean
-        description: Include  emojis
-
-      use-emoji11:
-        type: boolean
-        description: Include  emojis
-      
-      use-emoji12:
-        type: boolean
-        description: Include  emojis
-
-      use-emoji13:
-        type: boolean
-        description: Include  emojis
 
 jobs:
   Apply:
