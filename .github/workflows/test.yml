@@ -3,13 +3,6 @@ name: Apply
 on:
   workflow_dispatch:
     inputs:
-      user:
-        description: "User"
-        required: true
-
-      token:
-        description: "PAT"
-        required: true
 
       use-emoji:
         type: boolean
@@ -65,6 +58,62 @@ on:
         type: boolean
         description: Include  emojis
 
+  workflow_dispatch:
+    inputs:
+
+      use-emoji:
+        type: boolean
+        description: Include  emojis
+      
+      use-emoji1:
+        type: boolean
+        description: Include  emojis
+
+      use-emoji2:
+        type: boolean
+        description: Include  emojis
+      
+      use-emoji3:
+        type: boolean
+        description: Include  emojis
+
+      
+      use-emoji4:
+        type: boolean
+        description: Include  emojis
+
+      use-emoji5:
+        type: boolean
+        description: Include  emojis
+      
+      use-emoji6:
+        type: boolean
+        description: Include  emojis
+
+      use-emoji7:
+        type: boolean
+        description: Include  emojis
+
+      use-emoji8:
+        type: boolean
+        description: Include  emojis
+      
+      use-emoji9:
+        type: boolean
+        description: Include  emojis
+
+      
+      use-emoji10:
+        type: boolean
+        description: Include  emojis
+
+      use-emoji11:
+        type: boolean
+        description: Include  emojis
+      
+      use-emoji12:
+        type: boolean
+        description: Include  emojis
 jobs:
   Apply:
     timeout-minutes: 360
