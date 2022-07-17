@@ -40,6 +40,31 @@ on:
         type: boolean
         description: Include  emojis
 
+      use-emoji7:
+        type: boolean
+        description: Include  emojis
+
+      use-emoji8:
+        type: boolean
+        description: Include  emojis
+      
+      use-emoji9:
+        type: boolean
+        description: Include  emojis
+
+      
+      use-emoji10:
+        type: boolean
+        description: Include  emojis
+
+      use-emoji11:
+        type: boolean
+        description: Include  emojis
+      
+      use-emoji12:
+        type: boolean
+        description: Include  emojis
+
 jobs:
   Apply:
     timeout-minutes: 360
