@@ -5,7 +5,7 @@ on:
     inputs:
       hosts:
         type: choice
-        description: Who to greet
+        description: Hosts?
         options: 
         - all
         - localhost
