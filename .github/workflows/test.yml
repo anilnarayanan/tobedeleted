@@ -15,15 +15,15 @@ on:
         type: boolean
         description: Include  emojis
       
-      use-emoji:
+      use-emoji1:
         type: boolean
         description: Include  emojis
 
-      use-emoji:
+      use-emoji2:
         type: boolean
         description: Include  emojis
       
-      use-emoji:
+      use-emoji3:
         type: boolean
         description: Include  emojis
 
