@@ -27,6 +27,18 @@ on:
         type: boolean
         description: Include  emojis
 
+      
+      use-emoji4:
+        type: boolean
+        description: Include  emojis
+
+      use-emoji5:
+        type: boolean
+        description: Include  emojis
+      
+      use-emoji6:
+        type: boolean
+        description: Include  emojis
 
 jobs:
   Apply:
