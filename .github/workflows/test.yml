@@ -27,7 +27,7 @@ on:
 jobs:
   Apply:
     timeout-minutes: 360
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
