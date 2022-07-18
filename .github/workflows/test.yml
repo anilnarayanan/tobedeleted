@@ -20,6 +20,9 @@ on:
         type: boolean
         description: Ignore errors?
         required: true
+        
+      playbook-name:
+        description: Playbooks (';' delimited)
 
 jobs:
   Apply:
